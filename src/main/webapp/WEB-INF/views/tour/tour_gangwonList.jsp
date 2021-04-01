@@ -284,7 +284,7 @@ label {
 						<tr class="${param.idx == tour_item.idx ? 'current' : ''} ">
 							<td class="head_img">
 								<img style="margin-right: 20px; width: 280px; height: 210px" 
-								src="${cpath }${tour_item.head_img}">
+								src="${cpath }/resources/head_tourImg/${tour_item.head_img}">
 							</td>
 							<td class="name">
 								<a href="${cpath }/tour/tourGoods/${tour_item.idx}">

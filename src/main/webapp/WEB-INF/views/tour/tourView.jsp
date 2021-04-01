@@ -16,7 +16,7 @@
 
 .tour_wrap_in > section {
    height: 500px;
-   background-color: yellow;
+   background-color: yellowgreen;
    border-bottom: 1px solid black;
 }
 
@@ -209,7 +209,6 @@
 		crossorigin="anonymous">
 
 <div class="tour_wrap">
-	<br><br><br>
 	<div class="tour_visual_wrap">
 	
 	<!-- 이미지 슬라이드 -->
