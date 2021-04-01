@@ -1,0 +1,65 @@
+@charset "utf-8";
+.tour_wrap {
+   width: 100%;
+   float: left;
+}
+.tour_wrap_pic {
+	position: relative;
+    height: 600px;
+    margin-bottom: 0;
+    padding: 0;
+    z-index: 15;
+    display: flex;
+	justify-content: center;
+}
+.img, .text {
+      position: absolute;
+      /* border: 5px solid red; */
+}
+.text {
+      color: black;
+      font-size: 50pt;
+      font-weight: bold;
+      z-index: 3;
+}
+.img {
+      z-index: 2;
+}
+.tour_wrap_in {
+	margin: 0 auto;	
+	width: 1200px;
+}
+.quick-link {
+	position: sticky;
+    top: 0px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 8;
+    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+}
+.link-list {
+	text-align: center;
+}
+.link-list-item {
+	position: relative;
+    display: inline-block;
+}
+.link-list-item a {
+	display: inline-block;
+    height: 70px;
+    line-height: 70px;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #666;
+}
+.app-list-header {
+	display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    height: 110px;
+    margin-bottom: 30px;
+    padding: 35px 0 34px;
+    border-bottom: 1px solid #999;
+}

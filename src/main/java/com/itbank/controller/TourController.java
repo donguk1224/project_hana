@@ -42,8 +42,8 @@ public class TourController {
 	@GetMapping("/tour/tourGoods/{idx}")
 	public ModelAndView tourGoods(@PathVariable int idx) {
 		ModelAndView mav = new ModelAndView("/tour/tourGoods");
-		Tour_ItemDTO dto = ts.getTour_Item(idx);
-		mav.addObject("dto", dto);
+		Tour_ItemDTO tour_item = ts.getTour_Item(idx);
+		mav.addObject("tour_item", tour_item);
 		return mav;
 	}
 	
