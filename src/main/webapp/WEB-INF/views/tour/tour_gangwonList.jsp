@@ -203,8 +203,10 @@ label {
 		<div class="img">
 			<img src="${cpath }/resources/img/강원1.jpg" style="width:100%">
 		</div>
-		<div class="text" style="height: 350px; color: black; margin-top: 200px;">
-			강원
+		<div class="text">
+			<p>
+				강원
+			</p>
 		</div>
 	</div>
 	<div class="tour_wrap_in">
@@ -282,7 +284,7 @@ label {
 						<tr class="${param.idx == tour_item.idx ? 'current' : ''} ">
 							<td class="head_img">
 								<img style="margin-right: 20px; width: 280px; height: 210px" 
-								src="${cpath }/resources/head_tourImg/${tour_item.head_img}">
+								src="${cpath }${tour_item.head_img}">
 							</td>
 							<td class="name">
 								<a href="${cpath }/tour/tourGoods/${tour_item.idx}">

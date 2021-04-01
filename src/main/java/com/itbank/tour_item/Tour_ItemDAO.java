@@ -14,7 +14,5 @@ public interface Tour_ItemDAO {
 	int inputTour_Item(Tour_ItemDTO user);
 
 	int selectMaxIdx();
-
-	//List<Tour_ItemDTO> getTour_ItemList();
 	
 }

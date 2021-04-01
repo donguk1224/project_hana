@@ -283,11 +283,11 @@
 		crossorigin="anonymous">
 
 <div class="contents">
-	<br><br><br>
 	<div class="product-top" style="height: 800px; display: flex;">
 		<div class="visual-flex" style="width: 900px; height: 800px;">
 			<div class="pic">
-				<img style="margin-right: 20px; width: 900px; height: 800px" src="${cpath }/resources/head_tourImg/${tour_item.head_img}">
+				<img style="margin-right: 20px; width: 280px; height: 210px" src="${cpath }${dto.head_img}">
+				<!-- <img src="${cpath }/resources/tourimg/tour1.jpg" style="width:100%; height: 1000px;">  -->
 			</div>
 		</div>
 		<div class="infoFlex" style="width: 650px; height: 100%; background-color: #eaeaea;">
@@ -295,10 +295,10 @@
 				<div class="product-info">
 					<div class="product-title">
 						<p class="local">${local.name}</p>
-						<h1 class="name">${tour_item.name}</h1>
+						<h1 class="name">${dto.name}</h1>
 						<div class="price-wrap">
 							<span class="price">${tour_price.price }</span>
-							<div class="usable">${tour_item.usable}일 후 부터 사용가능</div>
+							<div class="usable">${dto.usable}일 후 부터 사용가능</div>
 						</div>
 					</div>
 					<div class="coupon-area">
@@ -318,16 +318,15 @@
 				<div class="product-info-detail">
 					<div class="inner-section">
 						<div class="hashtag">
-							<h3>${tour_item.hashtag }</h3>
+							${dto.hashtag }
 						</div>
 						<div class="rate-wrap">
 							<div class="avg"></div>
 							<div class="order">
-								<span>구매 : ${tour_item.sold_cnt }</span>
-								<span>조회 : ${tour_item.view_cnt }</span>
+								<span>구매 : ${dto.sold_cnt }</span>
+								<span>조회 : ${dto.view_cnt }</span>
 							</div>
 						</div>
-					</div>
 						<div class="features">
 							<!-- <ul>
 								<li>
@@ -347,7 +346,7 @@
 								</li>
 							</ul>  -->
 						</div>
-					<!-- <div class="notice">
+					<div class="notice">
 						<div class="read">
 							<div class="title"><h2>꼭 읽어보세요!</h2></div>
 								<div class="dot-list">
@@ -355,7 +354,7 @@
 								</div>
 							</div>
 						</div>
-					</div> -->
+					</div>
 				</div>
 			</div>
 		</div>
@@ -366,11 +365,11 @@
 				<div class="wrap" style="height: 747px;">
 					<div class="product-info">
 						<div class="product-title">
-							<p class="local">${package_category.name }</p>
-							<h1 class="name">${tour_item.name }</h1>
+							<p class="local">${dto.local_idx }</p>
+							<h1 class="name">${dto.name }</h1>
 							<div class="price-wrap">
 								<span class="price">${tour_price.price }</span>
-								<div class="usable">${tour_item.usable}일 부터 사용가능</div>
+								<div class="usable">${dto.usable}일 부터 사용가능</div>
 							</div>
 						</div>
 					</div>
@@ -412,7 +411,7 @@
 							</div>
 							<div class="menus-right">
 								<button id="btn-reservation">						
-									<h2>예약하기</h2>
+									<h3>예약하기</h3>
 								</button>
 								<div class="modal hidden">
 									<div class="modal_overlay"></div>
@@ -444,32 +443,29 @@
 						<div class="left-content">
 							<section class="content">
 								<h2>기본정보</h2>
-								<div>${tour_item.content }</div>
-								<div></div><img style="margin-right: 20px; width: 500px; height: 1000px" src="${cpath }/resources/tourImg/${tour_item.con_img}"></div>
+								<div>${dto.content }</div>
+								<div></div><img style="margin-right: 20px; width: 280px; height: 210px" src="${cpath }${dto.head_img}"></div>
+								<!-- <div><img src="${cpath }/resources/tourimg/tour1.jpg" style="width:80%"></div>  -->
 							</section>
 							<section class="how_to">
 								<h2>사용방법</h2>
-								<div>${tour_item.how_to }</div>
+								<div>${dto.how_to }</div>
 							</section>
 							<section class="matter">
 								<h2>유의사항</h2>
-								<div>${tour_item.matter }</div>
+								<div>${dto.matter }</div>
 							</section>
 							<section class="refund_rule">
 								<h2>취소 및 환불규정</h2>
-								<div>${tour_item.refund_rule }</div>
+								<div>${dto.refund_rule }</div>
 							</section>
 						</div>
 					</div>
 					<div class="point-background">
 						<div class="left-content">
-							<section style="margin-left: 350px">
-								<h2>판매자 정보</h2>		
+							<section>
+								<h2>판매자 정보</h2>
 								<div>${tour_entrepreneur.brand_name }</div>
-								<div>${entrepreneur.brand_name }</div>
-								<div> | 응답률 {mark.p_avg}%</div>
-								<div>${entrepreneur.brand_info }</div>
-								<a href="#" style="position: absolute; top: 1570px; right: 900px">자세히 보기</a>
 							</section>
 						</div>
 					</div>
@@ -477,10 +473,9 @@
 						<div class="left-content">
 							<div class="inquiry-list">
 								<div class="list-header">
-									<div class="inner" style="margin-left: 350px">
+									<div class="inner">
 										<h2>상품문의</h2>
 										<div>${tour_qa.notice }</div>
-										<button style="position: absolute; top: 1630px; right: 900px">문의하기</button>
 									</div>
 								</div>
 							</div>

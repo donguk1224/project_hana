@@ -209,6 +209,7 @@
 		crossorigin="anonymous">
 
 <div class="tour_wrap">
+	<br><br><br>
 	<div class="tour_visual_wrap">
 	
 	<!-- 이미지 슬라이드 -->
@@ -316,42 +317,9 @@
 		
 		<section><h1>최근에 본 상품을 찾으세요?</h1></section>
 		
-		<!-- <section><h1>이번 주에 가장<br> 사랑받은 여행이에요
-		<div style="width: 1200px; height: 600px; display: flex">
-		
-		</div>
-		</h1></section>  -->
-		<section style="width: 1200px; height: 600px;">
-			<h1>이번 주에 가장 <br>사랑받은 여행이에요</h1>
-			<div style="width: 1200px; height: 400px; display: flex;">
-				<c:forEach var="i" begin="1" end="4">
-					<div style="width: 300px; height: 400px; padding-left: 10px; padding-top: 20px;">
-						<c:forEach var="entrepreneur" items="${entrepreneurAll }">
-							<c:if test="${entrepreneur.idx eq tourList[i].entrepreneur_idx }">
-								<form action="tourGoods" method="POST">
-									<input type="hidden" name="entrepreneur_idx" value="${entrepreneur.idx}">
-									<input type="hidden" name="tour_item_idx" value="${tourGoodsList[i].idx }">
-									<input type="submit" value=""
-												style="width: 280px; height: 230px;
-												background-size: 280px 230px;
-												background-image: url('${cpath}${tour_itemList[i].head_img }');">
-									<h5 style="color: #eaeaea; font-size: 11pt;">
-										${local.name }
-									</h5>
-									<h4>
-										${tour_item.name }
-										${tour_price.price }
-									</h4>	
-									<h6>
-										${tour_item.usable }일 후 사용가능
-									</h6>
-								</form>
-							</c:if>
-						</c:forEach>
-					</div>
-				</c:forEach>
-			</div>
-		</section>
+		<section><h1>이번 주에 가장<br> 사랑받은 여행이에요
+		<a href="${cpath }/admin/upload">사진 업로드</a>
+		</h1></section>
 		
 		<section><h1>#MD추천 #짧게 떠나는 여행 떠나고 싶어요</h1></section>
 		<section><h1>🚗제주 렌터카 고급자차 포함 특가🚕</h1></section>
