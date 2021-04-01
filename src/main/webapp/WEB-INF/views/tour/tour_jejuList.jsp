@@ -201,10 +201,10 @@ label {
 <br><br><br>
 	<div class="tour_wrap_pic">
 		<div class="img">
-			<img src="${cpath }/resources/img/강원1.jpg" style="width:100%">
+			<img src="${cpath }/resources/img/제주1.jpg" style="width:100%">
 		</div>
-		<div class="text" style="height: 350px; color: black; margin-top: 200px;">
-			강원
+		<div class="text" style="height: 350px; color: white; margin-top: 200px;">
+			제주
 		</div>
 	</div>
 	<div class="tour_wrap_in">
@@ -214,11 +214,15 @@ label {
 					<li class="link-list-item"><a href="#">전체</a> * </li>
 					<li class="link-list-item"><a href="#">투어&액티비티</a> * </li>
 					<li class="link-list-item"><a href="#">입장권&교통패스</a> * </li>
-					<li class="link-list-item"><a href="#">살아보기</a></li>
+					<li class="link-list-item"><a href="#">편의서비스</a> * </li>
+					<li class="link-list-item"><a href="#">살아보기</a> * </li>
+					<li class="link-list-item"><a href="#">레스토랑</a> * </li>
+					<li class="link-list-item"><a href="#">렌터카</a> * </li>
+					<li class="link-list-item"><a href="#">페리/유람선/크루즈</a></li>
 				</ul>
 			</div>
 		</div>
-		<div style="height: 1200px; display: flex;">
+	<div style="height: 1200px; display: flex;">
 		<div style="width: 300px; height: 1100px;">
 			<div style="width: 250px; height: 25px; margin-left: 20px">
 				<h3>CATEGORY</h3>
@@ -226,36 +230,64 @@ label {
 			<hr>
 			<div style="width:300px; height: 800px;" id="hotel_filter" >
 				<div style="width: 250px; margin-left: 20px;">
-					<h3><a href="#" id="tour_gangwon_filter_0">전체</a></h3>
+					<h3><a href="#" id="tour_jeju_filter_0">전체</a></h3>
 					<div style="width: 250px; height: 120px; background-color: #F2F2F2; display: none;"
-							id="tour_gangwon_filter_0_in">
+							id="tour_jeju_filter_0_in">
 					</div>
 				</div>
-				<hr>	
+				<hr>			
 				<div style="width: 250px; margin-left: 20px;">
-					<h3><a href="#" id="tour_gangwon_filter_1">투어&액티비티</a></h3>
+					<h3><a href="#" id="tour_jeju_filter_1">투어&액티비티</a></h3>
 					<div style="width: 250px; height: 120px; background-color: #F2F2F2; display: none;"
-							id="tour_gangwon_filter_1_in">
+							id="tour_jeju_filter_1_in">
 					</div>
 				</div>
 				<hr>
 				<div style="width: 250px; margin-left: 20px">
-					<h3><a href="#" id="tour_gangwon_filter_2" >입장권&교통패스</a></h3>
+					<h3><a href="#" id="tour_jeju_filter_2" >입장권&교통패스</a></h3>
 					<div style="width: 250px; height: 120px; background-color: #F2F2F2; display: none;"
-							id="tour_gangwon_filter_2_in">
+							id="tour_jeju_filter_2_in">
 					</div>
 				</div>
-				<hr>				
+				<hr>
 				<div style="width: 250px; margin-left: 20px">
-					<h3><a href="#" id="tour_gangwon_filter_3" >살아보기</a></h3>
+					<h3><a href="#" id="tour_jeju_filter_3" >편의서비스</a></h3>
 					<div style="width: 250px; height: 120px; background-color: #F2F2F2; display: none;"
-							id="tour_gangwon_filter_3_in">
+							id="tour_jeju_filter_3_in">
+					</div>
+				</div>
+				<hr>
+				<div style="width: 250px; margin-left: 20px">
+					<h3><a href="#" id="tour_jeju_filter_4" >살아보기</a></h3>
+					<div style="width: 250px; height: 120px; background-color: #F2F2F2; display: none;"
+							id="tour_jeju_filter_4_in">
+					</div>
+				</div>
+				<hr>
+				<div style="width: 250px; margin-left: 20px">
+					<h3><a href="#" id="tour_jeju_filter_5" >레스토랑</a></h3>
+					<div style="width: 250px; height: 120px; background-color: #F2F2F2; display: none;"
+							id="tour_jeju_filter_5_in">
+					</div>
+				</div>
+				<hr>
+				<div style="width: 250px; margin-left: 20px">
+					<h3><a href="#" id="tour_jeju_filter_6" >렌터카</a></h3>
+					<div style="width: 250px; height: 120px; background-color: #F2F2F2; display: none;"
+							id="tour_jeju_filter_6_in">
+					</div>
+				</div>
+				<hr>
+				<div style="width: 250px; margin-left: 20px">
+					<h3><a href="#" id="tour_jeju_filter_7" >페리/유람선/크루즈</a></h3>
+					<div style="width: 250px; height: 120px; background-color: #F2F2F2; display: none;"
+							id="tour_jeju_filter_7_in">
 					</div>
 				</div>
 				<hr>
 			</div>
 		</div>
-			<div style="width: 900px; height: 2000px; background-color: #eaeaea; overflow-y: scroll;">
+		<div style="width: 900px; height: 2000px; background-color: #eaeaea; overflow-y: scroll;">
 				<div class="app-list-header">
 					<div class="title" style="width: 900px;">
 						<span>전체</span> (${tour_item.idx })
@@ -300,18 +332,18 @@ label {
 				</table>
 				<div class="hbox paging">
 					<c:if test="${map.paging.prev }">
-						<a href="${cpath }/tour_gangwon/${map.paging.begin - 1}?type=${param.type}&word=${param.word}">◀</a>
+						<a href="${cpath }/tour_jeju/${map.paging.begin - 1}?type=${param.type}&word=${param.word}">◀</a>
 					</c:if>
 				</div>
 				<c:forEach begin="${map.paging.begin }" end="${map.paging.end }" var="i">
-					<a href="${cpath }/tour_gangwon/${i}?type=${param.type}&word=${param.word}">
+					<a href="${cpath }/tour_jeju/${i}?type=${param.type}&word=${param.word}">
 					${i == map.paging.page ? '<strong>' : '' }
 						[${i }]
 					${i == map.paging.page ? '</strong>' : '' }
 					</a>
 				</c:forEach>
 				<c:if test="${map.paging.next }">
-					<a href="${cpath }/tour_gangwon/${map.paging.end + 1}?type=${param.type}&word=${param.word}">▶</a>
+					<a href="${cpath }/tour_jeju/${map.paging.end + 1}?type=${param.type}&word=${param.word}">▶</a>
 				</c:if>
 				<c:choose>
 					<c:when test="${login.userkind == '3' }">

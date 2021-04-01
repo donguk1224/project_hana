@@ -19,9 +19,8 @@
 		<typeAlias type="com.itbank.add_category.Add_CategoryDTO" alias="add_category" />
 		<typeAlias type="com.itbank.con_category.Con_CategoryDTO" alias="con_category" />
 		<typeAlias type="com.itbank.entrepreneur.EntrepreneurDTO" alias="entrepreneur" />
-		
+		<typeAlias type="com.itbank.package_detail.Package_DetailDTO" alias="package_detail" />
 		<typeAlias type="com.itbank.tour_price.Tour_PriceDTO" alias="tour_price"/>
 		<typeAlias type="com.itbank.tour_item.Tour_ItemDTO" alias="tour_item"/>
-		<typeAlias type="com.itbank.entrepreneur.EntrepreneurDTO"  alias="entrepreneur"/>
 	</typeAliases>
 </configuration>
